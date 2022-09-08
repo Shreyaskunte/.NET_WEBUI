@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSE</title>
+</head>
+<body>
+
+    <script>
+        var num = 1234;
+        var rev = 0;
+        var lastdig = 0;
+        sum = 0;
+
+        while(num != 0){
+	        lastdig = num % 10;
+            sum = sum + lastdig
+            rev = rev * 10 + lastdig;
+            num = Math.floor(num/10);
+            }
+        document.write("Reverse is : "+rev +"<br>");
+        document.write("Sum is : "+sum+"<br>");
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div.image{
+            border-radius: 70px;
+            position: relative;
+            height: 300px;
+            width: 300px;
+            animation-name: bridge_animation;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes bridge_animation{
+            0% {background-image: url("Assessts/KGF.jpg"); left: 0px;top: 0px;}
+            20% {background-image: url("Assessts/leo.png"); left: 30px;top: 30px;}
+            50% {background-image: url("Assessts/perfume.jpg"); left: 50px;top: 50px;}
+            100% {background-image: url("Assessts/sanch.jpg"); left: 50px;top: 50px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image"></div>
+</body>
+</html>

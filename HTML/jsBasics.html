@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics</title>
+    <script type="text/javascript" src="jsexternal.js" ></script>
+    <script type="text/javascript" >
+        function msg(){
+            alert("Welcome to Java Script in the head tag");
+        }
+    </script>
+</head>
+<body>
+    
+    <!--Accessing the JS Function
+    <script type="text/javascript" >
+        function msg1(){
+            alert("Welcome to Java Script in the body tag");
+        }
+    </script>
+    <script type="text/javascript" >
+            alert("Welcome to JS I am an auto alert");
+    </script>
+    <input type="button" value="Head" onclick="msg()">
+    <input type="button" value="Body" onclick="msg1()">
+    <input type="button" value="External JS" onclick="msg2()"/>-->
+    <!--Display the output in JS in 4 ways-->
+    <p id="info">Hi Bro</p>
+    <script>
+        document.getElementById("info").innerHTML = "I am a message to inner HTML";
+    </script>
+    <!--document.write-->
+    <script>
+        document.write("I am a message through doucment.write");
+    </script>
+    <!--Window.alert
+    <script>
+        window.alert("Window Alert");
+    </script> -->
+    <!--consol.log-->
+    <script>
+        console.log("Consol.log");
+    </script>
+    <br>
+    <script>
+        var empid = 100;
+        var empname = "John";
+        var empnumber = [9029011,9343599];
+        var empstatus = true;
+        document.write(empname + 's' + " id is " + empid + "<br>");
+        document.write(empnumber[1]);
+    </script>
+    <br>
+    <!--object-->
+    <p id="address"></p>
+    <script>
+         const address = {
+        street_number : 123,
+        city : "Banglore",
+        pincode : 563147
+    }
+    document.getElementById("address").innerHTML = address.street_number + " " + address.city + " " + address.pincode;
+    </script>
+    <br>
+    <button onclick="this.innerHTML = Date()">Date</button>
+    <br>
+    <br>
+    <select onchange="alert('Selection Changed')">
+    <option value="">DOTNET</option>
+    <option value="">JAVA</option>
+    <option value="">Python</option>
+</select>
+<br>
+<br>
+    <input type="text" name="" onkeypress="alert('Text Entered')" id="">
+    <br>
+    <br>
+    <input type="text" onfocus="focus()" name="" id="name">
+    <script>
+        function focus(){
+            var name1 = document.getElementById('name');
+            name1.style.backgroundColor='brown'
+            name1.style.color='lightgreen'
+        }
+    </script>
+    <br>
+    <br>
+    <p id="hover" onmouseover="hoverfunc()" onmouseleave="leave()" style="background-color: lightblue ; height: 100px; width: 100px; " >HELLO</p>
+
+    <script>
+        function hoverfunc(){
+            var a = document.getElementById('hover');
+            a.style.width="200px";
+            a.style.height="50px";
+            a.style.backgroundColor="red";
+            a.style.fontSize="50px"
+        }
+        function leave(){
+            var a = document.getElementById('hover');
+            a.style.width="100px";
+            a.style.height="100px";
+            a.style.backgroundColor="lightblue";
+            a.style.fontSize="20px"
+
+        }
+    </script>
+    <input type="button" onclick="login('John',12345)" value="Login">
+    <br><br>
+    <input type="button" onclick="bonus(122345)" value="Bonus Bro">
+
+    <script>
+        function login(username,password){
+            alert("Welcome " + username);
+        }
+        function bonus(salary){
+            alert("Festival Bonus for you : " + (salary+salary))
+        }
+    </script>
+</body>
+</html>

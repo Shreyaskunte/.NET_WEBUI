@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+    <script>
+        var courses = ['DOTNET','JAVA','PHP'];
+        document.write("PUSH AND POP")
+        document.write("<br>")
+        for( var i = 0;i<courses.length;i++)
+        {
+            document.write(courses[i] + "<br>");
+        }
+        document.write("<hr>");
+        document.write(courses.length);
+        document.write("<hr>");
+        courses.push("PYTHON");
+        for( var i = 0;i<courses.length;i++)
+        {
+            document.write(courses[i] + "<br>");
+        }
+        document.write("<hr>");
+        var deleted = courses.pop();
+        document.write(deleted);
+        document.write("<hr>");
+        document.write("SHIFT AND UNSHIFT");
+        document.write("<br>");
+        var deleted1 = courses.shift();
+        document.write(courses.length + "<br>");
+        document.write(deleted1 + "<br>");
+        document.write("<hr>");
+        courses.unshift('HTML','CSS','JS');
+        document.write(courses.length + "<br>");
+        for( var i = 0;i<courses.length;i++)
+        {
+            document.write(courses[i] + "<br>");
+        }
+        document.write("<hr>");
+        document.write("FOR-IN" + "<br>");
+        document.write("<br>");
+        //for-in loop
+        for(var course in courses)
+        {
+            document.write(courses[course] + "<br>");
+        }
+        document.write("<br>");
+
+        //for of loop
+        for(var course of courses)
+        {
+            document.write(course + "<br>")
+        }
+
+    </script>
+</body>
+</html>

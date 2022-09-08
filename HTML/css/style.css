@@ -1,0 +1,38 @@
+pre{
+    color: brown;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+/*ID Selector*/
+#demo{
+    color: blueviolet;
+    background-color: bisque;
+}
+
+/*Class Selector*/
+.demo1{
+    color: crimson;
+    background-color: rgb(46, 2, 128);
+}
+
+
+/*Element Selector*/
+h2{
+    color: black;
+}
+
+/*Grouping Selector*/
+h4,h5{
+    background-color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Universal Selectors*/
+*{
+    color:darkblue;
+    background-color: rgb(254, 255, 224);
+    text-align: justify;
+}

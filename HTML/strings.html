@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Strings</title>
+</head>
+<body>
+    <script>
+        var course = "Javascript";
+        var anothercourse = "HTML";
+        //concatination
+        var toconcatoneandtwo = course.concat(anothercourse);
+        document.write(toconcatoneandtwo)
+        document.write("<br>");
+
+        //index
+        var message = "Welcome to Js.......Welcome Back";
+        var value = message.indexOf("Welcome")
+        document.write(value);
+        document.write("<br>");
+        var value1 = message.lastIndexOf("Welcome")
+        document.write(value1);
+        document.write("<br>");
+
+
+        //slice
+        var name = "John Doe";
+        var fname = name.slice(0,4);
+        document.write(fname)
+        document.write("<br>");
+
+        //remove white spaces
+        var info = "         Hello    Bro     hengidira????"
+        var infoupdated = info.trim();
+        document.write(infoupdated)
+        document.write("<br>");
+
+        
+        
+    </script>
+    
+</body>
+</html>
