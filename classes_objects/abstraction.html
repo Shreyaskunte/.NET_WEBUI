@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSTRACTION</title>
+</head>
+<body>
+
+    <script>
+        class Course
+        {
+            constructor()
+            {
+                if(this.constructor == Course)
+                {
+                    throw new Error("Abstarct class cannot be instantiated");
+                }
+            }
+
+            course_details()
+            {
+                throw new Error("Abstarct method cannot be invoked");
+            }
+        }
+        class js extends Course
+        {
+
+            course_details()
+            {
+                console.log("Java Script");
+            }
+
+        }
+        var c = new js();
+        c.course_details();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+
+    <script>
+
+        //function without class
+        function trainee_details(tid,tname)
+        {
+            var id = tid;
+            var name = tname;
+
+            Object.defineProperty
+            (
+                this,"id",
+                {
+                    get:function()
+                    {
+                        return id;
+                    },
+                    set:function()
+                    {
+                        this.id=id;
+                    }
+                }
+            );
+            Object.defineProperty
+            (
+                this,"name",
+                {
+                    get:function()
+                    {
+                        return name;
+                    },
+                    set:function()
+                    {
+                        this.name=name;
+                    }
+                }
+            );
+        }
+
+        var t = new trainee_details(10,"John");
+        console.log(t.id);
+        console.log(t.name);
+    </script>
+
+    <script>
+
+        class Employee{
+            constructor()
+            {
+                var empid;
+                var empname;
+            }
+            //property for empid
+            getID()
+            {
+                return this.empid;
+            }
+            setID(id)
+            {
+                this.empid = id;
+            }
+        }
+        var e = new Employee();
+        e.setID(10);
+        console.log(e.getID());
+    </script>
+
+    <script>
+        class address
+
+        {
+            #streetno;//private variable by adding #
+            city;
+            #pincode;
+            constructor(no,city,pincode)
+            {
+                this.#streetno=no;
+                this.city = city;
+                this.#pincode = pincode;
+                // this.get=()=>{
+                //     return pincode;
+                // }
+            }
+
+            hoist()
+            {
+                console.log(a);
+                 a = 20;
+            }
+
+            //property for pincode
+        }
+
+        var addr = new address(3,"Shimoga",577201);
+        console.log(addr.pincode);
+        console.log(addr.city);
+        console.log(addr.streetno);
+        addr.hoist();
+
+    </script>
+    
+</body>
+</html>

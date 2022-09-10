@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROTOTYPE</title>
+</head>
+<body>
+
+    <script>
+        //Function without protototype
+        function course_details()
+        {
+            courseID =  100;
+            courseName = "DOTNET";
+        }
+
+        document.write("Property Without Prototype : <br>");
+        var c = new course_details();
+        c.course_duration = "120hours";//3rd property
+        document.write(c.course_duration+"<br>");
+        var c1 = new course_details();
+        document.write(c1.course_duration+"<br>");//cannot access course duration
+        document.write("<br>");
+
+        //Function with protototype
+        function course_details()
+        {
+            //2 properties
+            courseID =  101;
+            courseName = "JAVA";
+        }
+
+        document.write("Property With Prototype : <br>");
+        //third property created using prototype
+        course_details.prototype.course_duration = "125hours";
+        var c = new course_details();
+        document.write(c.course_duration+"<br>");
+        var c1 = new course_details();
+        document.write(c1.course_duration+"<br>")//see there coming now
+        document.write("<br>");
+
+
+        //create function using prototype
+        document.write("Creating Function With Prototype : <br>");
+        course_details.prototype.display = function()
+        {
+            return courseID + " " + courseName;
+        }
+        var c2 = new course_details();
+        document.write(c2.course_duration+"<br>");
+        document.write(c2.display());
+        document.write("<br>");
+        document.write("<br>");
+
+    </script>
+
+    <script>
+        
+        //arrow functions
+        function display()
+        {
+            document.write("<nr>"+"Normal function");
+            document.write("<br>");
+
+        }
+        let disp=()=>document.write("<nr>"+"Arrow Function");
+
+        let square=x=>document.write("<br> Square is : "+ (x*x));
+        let add=(x,y)=>document.write("<br> Sum is : "+ (x+y));
+
+        
+        display();
+        disp();
+        square(3);
+        add(3,5);
+    </script>
+    
+</body>
+</html>

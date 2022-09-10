@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Bonus</title>
+</head>
+<body>
+
+    <form   >
+
+        <fieldset>
+
+            <label for="uname">Username</label><br>
+            <input type="text" name="uname" required id="uname"><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" required id="password"><br><br>
+            <label for="Salary">Salary</label><br>  
+            <input type="number" id="Salary" name = "Salary" min="20000">
+            <br>
+            <br>
+            <input type="radio"  name="domain" id="IT" value="IT">
+            <label for="IT">IT</label><br>
+            <input type="radio" name="domain" id="Testing"  value="Testing">
+            <label for="Testing">Testing</label><br>
+            <input type="radio" name="domain" id="Admin" value="Admin">
+            <label for="Admin">Admin</label><br>
+            <input type="radio" name="domain" id="Others" value="Others">
+            <label for="Others">Others</label><br><br>
+            <input type="button" value="Submit" onclick="bonuscalculator(this.form)">
+    
+        </fieldset>
+    </form>
+    <div class="resultText">
+        <p id="choice"> </p>
+    </div>
+    <script  type="text/javascript">
+        class ITBonus{
+            display(Salary)
+            {
+                var bonus = ((Salary * 0.5) + Salary);
+                return document.write("Bonus is : "+bonus);
+            }
+        }
+
+        class TestingBonus{
+            display(Salary)
+            {
+                var bonus = ((Salary * 0.45) + Salary);
+                return document.write("Bonus is : "+bonus);
+            }
+        }
+
+        class AdminBonus{
+            display(Salary)
+            {
+                var bonus = ((Salary * 0.3) + Salary);
+                return document.write("Bonus is : "+bonus);
+            }
+        }
+
+        class OtherBonus{
+            display(Salary)
+            {
+                var bonus = ((Salary * 0.2) + Salary);
+                return document.write("Bonus is : "+bonus);
+            }
+        }
+
+        function bonuscalculator(form)
+        {
+            var type = form.domain.value;
+            var v;
+            var Salary = document.getElementById("Salary").value;
+            console.log(Salary);
+            Salary = parseInt(Salary)
+            if (type == "IT")
+            {
+                v = new ITBonus();
+                v.display(Salary);
+            }
+
+            else if (type == "Testing")
+            {
+                v = new TestingBonus();
+                v.display(Salary);
+            }
+            else if (type == "Admin")
+            {
+                v = new AdminBonus();
+                v.display(Salary);
+            }
+            else if(type == "Others")
+            {
+                v = new OtherBonus();
+                v.display(Salary);
+            }
+            else{
+                document.write("<br>Choose from the option given above<br>");
+            }
+        }
+    </script>
+    
+</body>
+</html>
