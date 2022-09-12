@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Task 5</title>
+
+ 
+
+</head>
+<body>
+  <style>
+     #active{
+            background-color: rgb(94, 94, 94);
+        }
+    #intro {
+      background-image: url("Assessts/bridge.jpg");
+      height: 100vh;
+      background-size: cover;
+      background-position: fixed;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .transition{
+            transition: 0.5s, transform 1s;
+        }
+    .transition:hover{
+            scale: 110%;
+        }
+    .nav-link:hover{
+            scale: 120%;
+            transition-duration: 0.5s;
+        }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #intro {
+        margin-top: -58.59px;
+      }
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+  </style>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand nav-link" target="_blank" href="mailto:shreyaskunte613@gmail.com">
+        <img src="Assessts/—Pngtree—creative company logo_1197025.png" height="50px" width="50px" alt="">
+        <strong>SSK</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link"  id = "active" aria-current="page" href="#intro">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" rel="nofollow"
+              target="_blank" style="margin-left:5px ;" >Learn Bootstrap 5</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-flex flex-row">
+          <!-- Icons -->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+              target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <div id="intro" class="bg-image shadow-2-strong">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Learn Bootstrap 5</h1>
+          <a class="btn btn-outline-light btn-lg m-2" href="https://youtu.be/vpAJ0s5S2t0" role="button"
+            rel="nofollow" target="_blank">Start tutorial</a>
+          <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank"
+            role="button">Download Videos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>What is Bootstrap</strong></h4>
+            <p class="text-muted">
+              Bootstrap is a free, open source front-end development framework for the creation of websites and web apps. Designed to enable responsive development of mobile-first websites, Bootstrap provides a collection of syntax for template designs.
+
+              As a framework, Bootstrap includes the basics for responsive web development, so developers only need to insert the code into a pre-defined grid system. The Bootstrap framework is built on Hypertext Markup Language (HTML), cascading style sheets (CSS) and JavaScript. Web developers using Bootstrap can build websites much faster without spending time worrying about basic commands and functions.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Some Examples</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">First Web Page With Bootstrap 5</h5>
+                <p class="card-text">
+                  Bootstrap 5 uses HTML elements and CSS properties that require the HTML5 doctype.
+                </p>
+                <a href="https://www.w3schools.com/whatis/tryit.asp?filename=trywhatis_bootstrap&stacked=h" target="_blank"  class="btn btn-dark">Click Here</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bootstrap 5 Certificate</h5>
+                <p class="card-text">
+                  Certifications are valuable assets to gain trust and demonstrate knowledge to your clients.
+                </p>
+                <a href="https://www.w3schools.com/bootstrap5/bootstrap_exam.php" target="_blank" class="btn btn-dark">Click Here</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bootstrap 5 Quiz</h5>
+                <p class="card-text">
+                  You can test your Bootstrap 5 skills here.The test contains 25 questions and there is no time limit.
+                </p>
+                <a href="https://www.w3schools.com/bootstrap5/bootstrap_quiz.php" target="_blank" class="btn btn-dark">Click Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-dark btn-lg m-2"
+        href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+        Learn Bootstrap 5
+      </a>
+      <a role="button" class="btn btn-dark btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank">
+        Download Videos
+      </a>
+    </div>
+
+    <hr class="m-0" />
+
+    <div class="contact container">
+
+      <h2>CONTACT INFO</h2>
+          <table>
+            <tr>
+              <td><p><a href="https://www.facebook.com/ssk.kunte"><img src="Assessts/Handles/icons8-facebook-circled-50.png" alt="facebook.com"></a></p></td>
+              <td><p><a href="https://www.instagram.com/shreyas_kunte/"><img src="Assessts/Handles/icons8-instagram-50.png" alt="instagram.com"></a></p></td>
+              <td><p><a href="https://www.linkedin.com/in/shreyas-kunte-468212192/"><img src="Assessts/Handles/icons8-linkedin-50.png" alt="linkedin.com"></a></p></td>
+              <td><p><a href="https://twitter.com/ShreyasKunteS1"><img src="Assessts/Handles/icons8-twitter-50.png" alt="twitter.com"></a></p></td>
+              <td><p><a href="mailto:shreyaskunte613@gmail.com"><img src="Assessts/Handles/icons8-gmail-login-48.png" alt="twitter.com"></a></p></td>
+            </tr>
+          </table>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+    </div>
+
+</body>
+</html>
